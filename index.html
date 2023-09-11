@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/7650d7a7c2.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="typewrite.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
 
@@ -80,9 +81,21 @@
 
         /* Animation */
         .anim-typewriter{
-        animation: typewriter 1.5s steps(44) 1s 1 normal both,
-                    blinkTextCursor 500ms steps(44) infinite normal;
+            animation: typewriter 1.5s steps(44) 1s 1 normal both,
+                        blinkTextCursor 500ms steps(44) infinite normal;
+            animation-delay: 1s;
         }
+
+        .typewrite {
+            font-family: 'Lexend', sans-serif;
+            padding: 1vw;
+            font-size: 2vw;
+        }
+
+        .tags{
+            margin: -5vw 0;
+        }
+
         @keyframes typewriter{
             from{width: 0;}
             to{width: 27vw;}
@@ -91,6 +104,43 @@
             from{border-right-color: rgba(255,255,255,.75);}
             to{border-right-color: transparent;}
         }
+        @keyframes typewriter-phone{
+            from{width: 0;}
+            to{width: 80vw;}
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .name {
+                font-size: 10vw;
+            }
+
+            .pfp {
+                width: 40vw;
+                height: 40vw;
+            }
+
+            .socials i{
+                font-size: 7vw;
+                margin: 0 2vw;
+            }
+
+            .anim-typewriter{
+                animation: typewriter-phone 1.5s steps(44) 1s 1 normal both,
+                        blinkTextCursor 500ms steps(44) infinite normal;
+                animation-delay: 1s;
+            }
+
+            .typewrite {
+                font-family: 'Lexend', sans-serif;
+                padding: 1vw;
+                font-size: 7vw;
+            }
+
+            .tags{
+                margin: -12vw 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -98,8 +148,12 @@
         <div class="pfp" data-aos="zoom-in-up">
 
         </div>
-        <p class="name line-1 anim-typewriter" data-aos="fade-down">
+        <p class="name" data-aos="flip-up">
             Aarav Mahajan
+            <div class="tags">
+                <p class="typewrite" data-period="200" data-type='["Developer.", "Basketball Player."]'>
+                <span class="wrap"></span>
+            </div>
         </p>
         <div class="socials" data-aos="fade-up">
             <a href="https://www.instagram.com/iam_aarav_0915/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -108,8 +162,5 @@
             <a href="mailto:mahajanaarav2020@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
         </div>
     </div>
-    <script>
-        AOS.init();
-    </script>
 </body>
 </html>
