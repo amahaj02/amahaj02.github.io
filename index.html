@@ -5,15 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/7650d7a7c2.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .container{
+            background: linear-gradient(180deg, hsla(208, 67%, 81%, 1) 0%, hsla(37, 65%, 85%, 1) 51%, hsla(301, 65%, 83%, 1) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .pfp{
+            height: 15vw;
+            width: 15vw;
+            background-image: url('333699210_1414584795981666_8465882276005856981_n.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: none;
+            border-radius: 50%;
+            margin-top: -5vw;
+            margin-bottom: 1vw;
+        }
+
+        .name{
+            font-family: 'Lexend', sans-serif;
+            font-weight: bold;
+            font-size: 3.5vw;
+        }
+
+        .socials{
+            margin-top: 2vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        .socials i{
+            font-size: 2vw;
+            margin: 0 0.5vw;
+        }
+
+        a{
+            text-decoration: none;
+            transition-duration: 0.3s;
+            color: black;
+        }
+
+        a:hover{
+            color: #CF9fFF;
+            transform: translateY(-4px);
+        }
+
+        .line-1{
+            margin: 0 auto;
+            border-right: 2px solid rgba(255,255,255,.75);
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;   
+        }
+
+        /* Animation */
+        .anim-typewriter{
+        animation: typewriter 1.5s steps(44) 1s 1 normal both,
+                    blinkTextCursor 500ms steps(44) infinite normal;
+        }
+        @keyframes typewriter{
+            from{width: 0;}
+            to{width: 27vw;}
+        }
+        @keyframes blinkTextCursor{
+            from{border-right-color: rgba(255,255,255,.75);}
+            to{border-right-color: transparent;}
+        }
+    </style>
 </head>
 <body>
-    <h1>hello world
+    <div class="container">
+        <div class="pfp" data-aos="zoom-in-up">
 
-    </h1>
-    <h6>maa ki choot</h6>
-    <a href="https://vaibhav-sharma.me" target="_blank"> 
-        VAIBHAV'S WEBSITE
-    </a>
-    <img src="https://github.com/gigabite-pro.png" alt="mkc" width="200" >
+        </div>
+        <p class="name line-1 anim-typewriter" data-aos="fade-down">
+            Aarav Mahajan
+        </p>
+        <div class="socials" data-aos="fade-up">
+            <a href="https://www.instagram.com/iam_aarav_0915/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/amahaj02" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/aarav-mahajan-155935279/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:mahajanaarav2020@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+    </div>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
